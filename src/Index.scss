@@ -1,0 +1,166 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$color-black: #000005;
+$color-white: #ECE6E5;
+$color-grey: #9F9A99;
+$color-tmdb-blue: #081c24;
+$color-tmdb-green:  #01d277;
+
+body {
+  font-family: Oswald,'Source Sans Pro', sans-serif;
+  height: 100%;
+}
+.container {
+  max-width: 900px;
+}
+
+.navbar-brand {
+  img {
+    margin-right: 1rem;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-info {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden
+}
+.navi {
+  background-color: $color-black;
+}
+.bootstrap-typeahead-input {
+  margin: 4rem 0 0;
+
+  input {
+    background-color: $color-black;
+    border: 0;
+    border-bottom: 2px solid $color-tmdb-green;
+    color: $color-white;
+
+    &:focus {
+      border: 0;
+      border-bottom: 2px solid $color-white;
+      color: $color-white;
+    }
+  }
+}
+
+.bootstrap-typeahead-menu {
+  background-color: $color-black;
+  width: 100%;
+  li {
+    background-color: $color-black;
+    font-weight: lighter;
+    color: $color-white;
+    height: 50px;
+    border-bottom: 1px solid $color-white;
+    transition: .5s ease-in-out;
+    img {
+      height: 50px !important;
+      width: 50px !important;
+    }
+    span { font-size: 1.2rem}
+  }
+}
+
+.movie {
+  background-color: $color-black;
+  color: $color-white;
+  min-height: 500px;
+
+   h1 {
+     font-size: 2.8rem;
+     font-weight: 600;
+     text-transform: uppercase;
+   }
+
+   .preview {
+     font-size: 1rem;
+     font-weight: 300;
+     margin: 1.5rem 0;
+   }
+}
+
+.info-section {
+  padding: 1rem 1.5rem;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    span {
+      color: $color-tmdb-green;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+
+  .below-title {
+    span {
+      font-size: 1.4rem;
+      &:nth-child(2) {
+        color: $color-tmdb-green;
+      }
+    }
+  }
+
+  .preview {
+    color: $color-grey;
+    padding: 0 0 1rem;
+  }
+
+  .lists {
+    h6 {
+      color: $color-tmdb-green;
+      text-transform: uppercase;
+    }
+    .writer {
+      margin-top: 1.6rem;
+    }
+    li, .li {
+      color: $color-grey;
+      font-size: .9rem;
+    }
+  }
+
+}
+
+
+.poster {
+  height: 100%;
+  width: 100%;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.scores {
+  padding: 1rem 0 -.9rem;
+  margin-top: -.7rem;
+  h6 {
+    color: $color-grey;
+    font-size: .7rem;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    color: $color-tmdb-green;
+  }
+
+  .score {
+    border-top: .1px solid rgba($color-grey, .3);
+    padding: 1.5rem 0; 
+    max-width: 180px;
+  }
+  .center-score {
+    border-left: .1px solid rgba($color-grey, .3);
+    border-right: .1px solid rgba($color-grey, .3);
+  }
+}
